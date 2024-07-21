@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tech_white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/taskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/tech_blue_primary"
+            android:textStyle="bold"
+            android:paddingBottom="16dp"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tech_blue_gray"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/taskStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/tech_blue_dark"
+            android:paddingBottom="8dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/taskStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/tech_blue_dark"
+            android:paddingBottom="16dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/taskEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/tech_blue_dark"
+            android:paddingBottom="8dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/taskEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/tech_blue_dark"
+            android:paddingBottom="16dp"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tech_blue_gray"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_photos"
+            android:textSize="20sp"
+            android:textColor="@color/tech_blue_primary"
+            android:textStyle="bold"
+            android:paddingBottom="16dp"
+            android:gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp" />
+    </LinearLayout>
+</ScrollView>

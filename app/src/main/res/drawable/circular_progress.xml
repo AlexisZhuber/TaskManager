@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="ring"
+            android:thicknessRatio="16">
+            <solid android:color="@color/tech_blue_light"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="ring"
+                android:thicknessRatio="16">
+                <solid android:color="@color/tech_blue_primary"/>
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="ring"
+                android:thicknessRatio="16">
+                <solid android:color="@color/tech_blue_dark"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

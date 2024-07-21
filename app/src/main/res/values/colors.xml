@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="tech_blue_light">#D9E2EC</color>
+    <color name="tech_blue_primary">#0D3B66</color>
+    <color name="tech_blue_dark">#1B2A41</color>
+    <color name="tech_blue_gray">#536C7E</color>
+    <color name="tech_grey">#4B4A67</color>
+    <color name="tech_white">#F7F9FB</color>
+</resources>

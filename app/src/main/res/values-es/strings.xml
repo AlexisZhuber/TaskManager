@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Gestor de Tareas</string>
+    <string name="nav_home">Tablero</string>
+    <string name="nav_requested">Tareas Solicitadas</string>
+    <string name="nav_started">Tareas Iniciadas</string>
+    <string name="nav_completed">Tareas Completadas</string>
+    <string name="nav_settings">Configuración</string>
+    <string name="nav_logout">Cerrar Sesión</string>
+    <string name="created_by">Creado por Cima Digital</string>
+    <string name="logo_content_description">Esta es la imagen del logo</string>
+    <string name="open_nav">Abrir el cajón de navegación</string>
+    <string name="close_nav">Cerrar el cajón de navegación</string>
+    <string name="enter_email_password">Por favor, ingrese correo electrónico y contraseña</string>
+    <string name="login_successful">Inicio de sesión exitoso</string>
+    <string name="login_failed">Error de inicio de sesión: %1$s</string>
+    <string name="register">Crear una cuenta nueva</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="enter_email">Ingrese su correo electrónico</string>
+    <string name="enter_password">Ingrese su contraseña</string>
+    <string name="already_have_account">¿Ya tienes una cuenta?</string>
+    <string name="register_button">Registrarse</string>
+    <string name="registration_successful">Registro Exitoso</string>
+    <string name="registration_failed">Error de registro: %1$s</string>
+
+
+    <string name="default_notification_channel_id">canal_gestor_de_tareas</string>
+    <string name="default_notification_channel_name">Notificaciones del Gestor de Tareas</string>
+    <string name="default_notification_channel_description">Notificaciones para la aplicación Gestor de Tareas</string>
+
+
+    <string name="task_description">Descripción</string>
+    <string name="task_date">Fecha</string>
+    <string name="task_time">Hora</string>
+    <string name="client_name">Nombre del Cliente</string>
+    <string name="client_address">Dirección del Cliente</string>
+
+
+    <string name="start_task">Iniciar Tarea</string>
+    <string name="start_task_confirmation">¿Estás seguro de que quieres iniciar la tarea?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+
+    <string name="description_hint">Descripción</string>
+    <string name="voice_input">Escribir por voz</string>
+    <string name="take_photo">Tomar foto</string>
+    <string name="submit">Enviar</string>
+    <string name="permission_denied">Permiso denegado</string>
+    <string name="max_photos">Máximo 5 fotos permitidas</string>
+    <string name="form_submitted">Formulario enviado</string>
+    <string name="form_submit_failed">Error en el envío del formulario</string>
+    <string name="speak_now">Habla ahora</string>
+    <string name="voice_input_not_supported">Entrada de voz no soportada</string>
+    <string name="photo">Foto</string>
+    <string name="delete_photo">Eliminar Foto</string>
+
+    <string name="finish_task">Finalizar Tarea</string>
+    <string name="finish_task_confirmation">¿Estás seguro de que quieres finalizar esta tarea?</string>
+
+    <string name="task_start_date">Fecha de inicio</string>
+    <string name="task_start_time">Hora de inicio</string>
+    <string name="task_end_date">Fecha de finalizacion</string>
+    <string name="task_end_time">Hora de finalizacion</string>
+
+    <string name="task_photos">Fotos de la tarea</string>
+
+    <string name="new_password">Nueva Contraseña</string>
+    <string name="enter_new_password">Ingrese nueva contraseña</string>
+    <string name="change_password">Cambiar Contraseña</string>
+    <string name="password_change_success">Contraseña cambiada exitosamente. Por favor, inicie sesión nuevamente.</string>
+    <string name="password_change_failed">Error al cambiar la contraseña.</string>
+    <string name="invalid_password">La contraseña debe tener al menos 8 caracteres y contener letras y números.</string>
+    <string name="confirm_password_change">¿Estás seguro de que deseas cambiar tu contraseña?</string>
+
+    <string name="completion_rate">Tasa de Finalización: %d%%</string>
+    <string name="total_tasks">Total de Tareas: %d</string>
+    <string name="completed_tasks">Tareas Completadas: %d</string>
+    <string name="average_task_duration">Duración Promedio de Tareas: %.2f min</string>
+</resources>

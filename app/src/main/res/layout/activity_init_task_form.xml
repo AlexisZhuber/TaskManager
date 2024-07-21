@@ -1,0 +1,89 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tech_white"
+    tools:context=".ui.profile.InitTaskFormActivity">
+
+    <FrameLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/tech_white">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/description_hint"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@color/tech_blue_dark"
+        android:textColorHint="@color/tech_blue_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonVoiceInput" />
+
+    <Button
+        android:id="@+id/buttonVoiceInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/voice_input"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/tech_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonTakePhoto" />
+
+    <Button
+        android:id="@+id/buttonTakePhoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/take_photo"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/tech_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonVoiceInput"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/recyclerViewPhotos" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPhotos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonTakePhoto"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonSubmit" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/tech_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewPhotos"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
