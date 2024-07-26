@@ -77,4 +77,7 @@
     <string name="total_tasks">Total Tasks: %d</string>
     <string name="completed_tasks">Completed Tasks: %d</string>
     <string name="average_task_duration">Average Task Duration: %.2f min</string>
+
+    <string name="bitcoin_price">Bitcoin Price: %1$s USD</string>
+
 </resources>

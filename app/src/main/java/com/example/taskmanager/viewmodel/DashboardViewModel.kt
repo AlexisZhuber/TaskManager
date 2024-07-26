@@ -3,6 +3,10 @@ package com.example.taskmanager.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.taskmanager.network.BitcoinPriceResponse
+import com.example.taskmanager.repository.DashboardRepository
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class DashboardViewModel : ViewModel() {
@@ -22,6 +26,9 @@ class DashboardViewModel : ViewModel() {
     private val _taskDurations = MutableLiveData<List<Pair<String, Float>>>()
     val taskDurations: LiveData<List<Pair<String, Float>>> get() = _taskDurations
 
+    private val repository = DashboardRepository()
+    val bitcoinPrice = MutableLiveData<BitcoinPriceResponse>()
+
     fun loadDashboardData() {
         // Simulate data
         val months = listOf("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul")
@@ -34,5 +41,16 @@ class DashboardViewModel : ViewModel() {
         _completedTasks.value = 150  // Simulated completed tasks
         _averageTaskDuration.value = 2.5f  // Simulated average task duration
         _taskDurations.value = simulatedData
+    }
+
+    fun fetchBitcoinPrice() {
+        viewModelScope.launch {
+            try {
+                val fetchedPrice = repository.getBitcoinPrice()
+                bitcoinPrice.value = fetchedPrice
+            } catch (e: Exception) {
+                // Manejo de errores
+            }
+        }
     }
 }

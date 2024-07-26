@@ -42,6 +42,12 @@ android {
 
 dependencies {
 
+    //RETROFIT
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+
+
     //Firebase
     implementation(platform(libs.firebase.bom))
 
