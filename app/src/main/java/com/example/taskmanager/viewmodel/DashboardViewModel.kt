@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.taskmanager.network.BitcoinPriceResponse
+import com.example.taskmanager.network.WeatherResponse
 import com.example.taskmanager.repository.DashboardRepository
 import kotlinx.coroutines.launch
 import kotlin.random.Random
@@ -27,7 +27,8 @@ class DashboardViewModel : ViewModel() {
     val taskDurations: LiveData<List<Pair<String, Float>>> get() = _taskDurations
 
     private val repository = DashboardRepository()
-    val bitcoinPrice = MutableLiveData<BitcoinPriceResponse>()
+    val weatherData = MutableLiveData<WeatherResponse>()
+    val weatherInCelsius = MutableLiveData<Float>()
 
     fun loadDashboardData() {
         // Simulate data
@@ -43,11 +44,15 @@ class DashboardViewModel : ViewModel() {
         _taskDurations.value = simulatedData
     }
 
-    fun fetchBitcoinPrice() {
+    fun fetchWeather() {
         viewModelScope.launch {
             try {
-                val fetchedPrice = repository.getBitcoinPrice()
-                bitcoinPrice.value = fetchedPrice
+                val fetchedWeather = repository.getWeather("Toronto")
+                weatherData.value = fetchedWeather
+
+                // Convertir temperatura de Kelvin a Celsius
+                val tempInCelsius = fetchedWeather.main.temp - 273.15f
+                weatherInCelsius.value = tempInCelsius
             } catch (e: Exception) {
                 // Manejo de errores
             }

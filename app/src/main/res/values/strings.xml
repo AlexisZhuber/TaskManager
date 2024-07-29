@@ -78,6 +78,6 @@
     <string name="completed_tasks">Completed Tasks: %d</string>
     <string name="average_task_duration">Average Task Duration: %.2f min</string>
 
-    <string name="bitcoin_price">Bitcoin Price: %1$s USD</string>
+    <string name="weather_info">Weather in %s: %.2f°C, %s</string>
 
 </resources>

@@ -1,32 +1,26 @@
 package com.example.taskmanager.network
 
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface ApiService {
-    @GET("v1/bpi/currentprice.json")
-    suspend fun getBitcoinPrice(): BitcoinPriceResponse
+    @GET("weather")
+    suspend fun getWeather(@Query("q") city: String, @Query("appid") apiKey: String): WeatherResponse
 }
 
-data class BitcoinPriceResponse(
-    val time: Time,
-    val bpi: Bpi
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
 )
 
-data class Time(
-    val updated: String,
-    val updatedISO: String,
-    val updateduk: String
-)
-
-data class Bpi(
-    val USD: Currency,
-    val GBP: Currency,
-    val EUR: Currency
-)
-
-data class Currency(
-    val code: String,
-    val rate: String,
+data class Weather(
     val description: String,
-    val rate_float: Float
+    val icon: String
+)
+
+data class Main(
+    val temp: Float,  // Kelvin
+    val pressure: Float,
+    val humidity: Float
 )

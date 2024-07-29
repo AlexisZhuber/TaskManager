@@ -52,12 +52,12 @@ class Dashboard : Fragment() {
             }
         })
 
-        viewModel.bitcoinPrice.observe(viewLifecycleOwner, Observer { bitcoinPrice ->
-            binding.bitcoinPriceLabel.text = getString(R.string.bitcoin_price, bitcoinPrice.bpi.USD.rate)
+        viewModel.weatherInCelsius.observe(viewLifecycleOwner, Observer { tempInCelsius ->
+            binding.weatherLabel.text = getString(R.string.weather_info, "Toronto", tempInCelsius, viewModel.weatherData.value?.weather?.get(0)?.description ?: "")
         })
 
         viewModel.loadDashboardData()
-        viewModel.fetchBitcoinPrice()
+        viewModel.fetchWeather()
     }
 
     override fun onDestroyView() {
